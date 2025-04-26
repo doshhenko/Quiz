@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container-all">
+      <div class="globe-container">
+         <div class="globe">
+            <div class="globe-sphere"></div>
+            <div class="globe-outer-shadow"></div>
+            <div class="globe-worldmap">
+                  <div class="globe-worldmap-back"></div>
+                  <div class="globe-worldmap-front"></div>
+            </div>
+            <div class="globe-inner-shadow"></div>
+         </div>
+      </div>
+      <form>
+         <div class="question">
+            <label>How many countries are there in the world</label>
+            <br>
+            <input type="radio" name="questionOne">163
+            <input type="radio" name="questionOne">193
+            <input type="radio" name="questionOne">256
+            <input type="radio" name="questionOne" id="answerOne">195
+         </div>
+         <div class="question">
+            <label>How many states are there in America</label>
+            <br>
+            <input type="radio" name="questionTwo">51
+            <input type="radio" name="questionTwo" id="answerTwo">50
+            <input type="radio" name="questionTwo">52
+            <input type="radio" name="questionTwo">56
+         </div>
+         <div class="question">
+            <label>How many time zones are there in the world</label>
+            <br>
+            <input type="radio" name="questionThree">48
+            <input type="radio" name="questionThree">16
+            <input type="radio" name="questionThree" id="answerThree">24
+            <input type="radio" name="questionThree">20
+         </div>
+         <div class="question">
+            <label>How many countries are in Africa</label>
+            <br>
+            <input type="radio" name="questionFour">57
+            <input type="radio" name="questionFour">52
+            <input type="radio" name="questionFour">35
+            <input type="radio" name="questionFour" id="answerFour">62
+         </div>
+         <div class="question">
+            <label>How many countries are in the EU</label>
+            <br>
+            <input type="radio" name="questionFive">32
+            <input type="radio" name="questionFive">16
+            <input type="radio" name="questionFive" id="answerFive">27
+            <input type="radio" name="questionFive">26
+         </div>
+
+         <button type="submit" class="btn">Send responses</button>
+         <p id="show"></p>
+      </form>
+   </div>
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+.container-all{
+    display: flex;
+    flex-direction: column;
+    margin-top: -5%;
+}
+
+.globe-container,
+.globe {
+    width: 200px;
+    height: 200px;  
+}
+.globe-container {
+    position: relative;  
+    display: inline-block;
+    margin-left: 90%;
+    top: 4em;
+    transform: scale(1.1);
+    position: relative;
+}
+.globe {
+    position: relative;  
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: 0; 
+    left: 0;
+}
+.globe-worldmap,
+.globe-worldmap-front,
+.globe-worldmap-back,
+.globe-sphere,
+.globe-outer-shadow,
+.globe-inner-shadow {
+    position: absolute; 
+    display: block; 
+    margin: 0; 
+}
+.globe-sphere,
+.globe-outer-shadow,
+.globe-inner-shadow {
+    left: 0; 
+    top: 0; 
+    width: 200px; 
+    height: 200px;
+    background-position: 0 0; 
+    background-repeat: no-repeat;
+}
+.globe-worldmap {
+    left: 0; 
+    top: 0; 
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 50%;
+}
+.globe-worldmap-front,
+.globe-worldmap-back {
+    left: 0; 
+    top: 0; 
+    width: 1000px; 
+    height: 200px; 
+    overflow: visible;
+    background-image: url(worldmap-2.svg);
+    background-repeat: no-repeat;
+}
+.globe-outer-shadow { 
+    left: 0; 
+    top: 186px; 
+    width: 200px; 
+    height: 30px;
+    background-image: url(outer_shadow.svg);
+}
+.globe-inner-shadow { 
+    background-image: url(inner_shadow-1.svg);
+}
+
+.globe-worldmap-front { 
+    background-position: 0px 0px;
+    animation: textureSpinreverse 12s linear infinite;
+}
+.globe-worldmap-back { 
+    background-position: 0px -220px;
+    animation: textureSpin 8s linear infinite;
+}
+
+@keyframes textureSpin {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-47.5%);
+    }
+}
+@keyframes textureSpinreverse {
+    from {
+        transform: translateX(-47.5%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.globe-sphere {
+    background-image:url(sphere-6.svg)
+}
+
+body{
+    background-image: linear-gradient(90deg, rgb(4, 169, 34) 0%, rgb(2, 103, 68) 38%, rgb(4, 74, 61) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:rgb(7, 62, 6);
+    }
+    
+    form{
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        width: 650px;
+        padding: 100px;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+    }
+    
+    label{
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    br{
+        display: none;
+    }
+
+    .question{
+        padding: 25px;
+    }
+    
+    .btn{
+        background-color: rgb(5, 65, 32);
+        color: #fff;
+        width: 100%;
+        border: 1px solid black;
+        padding: 15px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    #show{
+        margin: auto;
+        margin-top: 13px;
+    }
+
+        
+    @media all and (max-width: 1000px){
+        br{
+            display: block;
+        }
+    }
+    @media all and (max-width: 540px){
+        .globe-container{
+            opacity: 0;
+        }
+    }
+
+    @media all and (max-width: 540px){
+        label{
+            font-size: 11px;
+            padding: 0px;
+            margin: 0px;
+        }
+    
+        .question{
+            padding: 20px;
+        }
+    
+        form{
+            padding: 10px;
+            height: 600px;
+        }
+        .btn{
+            width: 400px;
+            height: 50px;
+        }
+    }
